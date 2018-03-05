@@ -1,0 +1,5 @@
+<launch>
+	<group ns="nlp">
+		<node name="nlp" pkg="nlp" type="nlp.py" output="screen"/>
+	</group>	
+</launch>

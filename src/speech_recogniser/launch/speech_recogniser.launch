@@ -1,0 +1,5 @@
+<launch>
+	<group ns="SpeechRecogniser">
+		<node name="SpeechRecogniser" pkg="speech_recogniser" type="recogniser.py" output="screen" launch-prefix="gnome-terminal --command" />
+	</group>
+</launch>

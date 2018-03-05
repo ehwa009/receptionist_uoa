@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+<launch>
+	
+	<!-- SET PARAMETERS-->
+	<!-- Set local it to true when testing the software. It generates receptionist response on the local Linux machine -->
+	<arg name="local" default="false"/>
+
+<!-- 	<include file="$(find openni_launch)/launch/openni.launch"/>-->
+	<include file="$(find face_trainer)/launch/face_trainer.launch"/>
+	<include file="$(find face_recogniser)/launch/face_recogniser.launch"/>
+	
+	<group if="$(arg procrob)">
+		<include file="$(find face_recognition)/launch/procrob.launch"/>
+	</group>
+
+	<group if="$(arg cob)">
+		<include file="$(find cob_people_detection)/ros/launch/people_detection.launch"/>
+	</group>
+
+	<group if="$(arg aws)">
+		<include file="$(find aws_face_recogniser)/launch/aws_recogniser.launch"/>
+	</group>
+
+	<group if="$(arg speech)">
+		<include file="$(find speech_recogniser)/launch/speech_recogniser.launch"/>
+	</group>
+	<group if="$(arg pocketsphinx_speech)">
+		<include file="$(find pocketsphinx)/launch/sphinxSR.launch"/>
+	</group>
+
+	<param name="google_speech" type="string" value="no" />
+	<param name="wit_speech" type="string" value="no" />
+	<param name="houndify_speech" type="string" value="no" />
+	<param name="bing_speech" type="string" value="no" />
+	<group if="$(arg google_speech)">
+		<param name="google_speech" type="string" value="yes" />
+	</group>
+	<group if="$(arg wit_speech)">
+		<param name="wit_speech" type="string" value="yes" />
+	</group>
+	<group if="$(arg houndify_speech)">
+		<param name="houndify_speech" type="string" value="yes" />
+	</group>
+	<group if="$(arg bing_speech)">
+		<param name="bing_speech" type="string" value="yes" />
+	</group>
+
+
+
+	<group ns="ReceptionistPerceptionSystem">
+		<node name="PerceptionSystem" pkg="receptionist_perception_system" type="perception.py" output="screen"/>
+	</group>
+
+	<!-- Decision system -->
+	<!-- <include file="$(find decision_system)/launch/decision.launch"/> -->
+
+
+</launch>

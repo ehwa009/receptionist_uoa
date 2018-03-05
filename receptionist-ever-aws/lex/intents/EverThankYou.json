@@ -1,0 +1,25 @@
+{
+    "name": "EverThankYou", 
+    "checksum": "f4e2fc5f-32b9-43ab-bee6-34614c287155", 
+    "version": "$LATEST", 
+    "lastUpdatedDate": 1499250628.384, 
+    "createdDate": 1499250506.128, 
+    "sampleUtterances": [
+        "Thanks", 
+        "Thank you", 
+        "Cheers", 
+        "Thank you for your help", 
+        "Thank you so much", 
+        "Thank you very much", 
+        "Cheers man", 
+        "Cheers mate"
+    ], 
+    "slots": [], 
+    "fulfillmentActivity": {
+        "type": "CodeHook", 
+        "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:231755972326:function:everReceptionistLambda", 
+            "messageVersion": "1.0"
+        }
+    }
+}

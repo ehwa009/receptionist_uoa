@@ -1,0 +1,45 @@
+{
+    "dialogCodeHook": {
+        "uri": "arn:aws:lambda:us-east-1:231755972326:function:moviebotFunction", 
+        "messageVersion": "1.0"
+    }, 
+    "name": "FindMovieByPlot", 
+    "checksum": "778d4ef0-fccd-48e2-a51e-4b0f36fd7cea", 
+    "version": "$LATEST", 
+    "lastUpdatedDate": 1498961469.964, 
+    "createdDate": 1498258466.984, 
+    "sampleUtterances": [
+        "The plot is {PlotDescription}", 
+        "I want to filter by plot", 
+        "plot", 
+        "The movie was about {PlotDescription}", 
+        "the story was {PlotDescription}", 
+        "can I find the movie by plot"
+    ], 
+    "slots": [
+        {
+            "slotType": "PlotDescription", 
+            "name": "PlotDescription", 
+            "slotConstraint": "Required", 
+            "valueElicitationPrompt": {
+                "maxAttempts": 2, 
+                "messages": [
+                    {
+                        "content": "What is the plot of the movie ?", 
+                        "contentType": "PlainText"
+                    }
+                ]
+            }, 
+            "priority": 1, 
+            "slotTypeVersion": "1", 
+            "sampleUtterances": []
+        }
+    ], 
+    "fulfillmentActivity": {
+        "type": "CodeHook", 
+        "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:231755972326:function:moviebotFunction", 
+            "messageVersion": "1.0"
+        }
+    }
+}

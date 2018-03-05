@@ -1,0 +1,6 @@
+<launch>
+	<group ns="Procrob">
+		<node name="Procrob_server" pkg="face_recognition" type="Fserver" output="screen" launch-prefix="gnome-terminal --command"/>
+		<node name="Procrob_client" pkg="face_recognition" type="Fclient" output="screen" launch-prefix="gnome-terminal --command"/>
+	</group>
+</launch>

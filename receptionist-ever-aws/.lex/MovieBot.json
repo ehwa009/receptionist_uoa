@@ -1,0 +1,63 @@
+{
+    "status": "READY", 
+    "intents": [
+        {
+            "intentVersion": "1", 
+            "intentName": "GoodBye"
+        }, 
+        {
+            "intentVersion": "2", 
+            "intentName": "UnsureResult"
+        }, 
+        {
+            "intentVersion": "1", 
+            "intentName": "ContinueFinding"
+        }, 
+        {
+            "intentVersion": "1", 
+            "intentName": "Fallback"
+        }, 
+        {
+            "intentVersion": "1", 
+            "intentName": "FindMovieByActor"
+        }, 
+        {
+            "intentVersion": "1", 
+            "intentName": "FindMovieByPlot"
+        }, 
+        {
+            "intentVersion": "1", 
+            "intentName": "FindMovieByQuote"
+        }, 
+        {
+            "intentVersion": "2", 
+            "intentName": "Welcome"
+        }
+    ], 
+    "name": "MovieBot", 
+    "locale": "en-US", 
+    "checksum": "41553c2b-19fb-43ca-9887-e428be850fb3", 
+    "abortStatement": {
+        "messages": [
+            {
+                "content": "Sorry, I could not understand. Goodbye.", 
+                "contentType": "PlainText"
+            }
+        ]
+    }, 
+    "version": "$LATEST", 
+    "lastUpdatedDate": 1498961508.358, 
+    "createdDate": 1498258654.088, 
+    "clarificationPrompt": {
+        "maxAttempts": 2, 
+        "messages": [
+            {
+                "content": "Sorry, can you please repeat that?", 
+                "contentType": "PlainText"
+            }
+        ]
+    }, 
+    "voiceId": "Joanna", 
+    "childDirected": false, 
+    "idleSessionTTLInSeconds": 300
+}

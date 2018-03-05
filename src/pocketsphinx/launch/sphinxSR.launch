@@ -1,0 +1,10 @@
+<launch>
+
+	<group ns="SR">
+		<node name="recognizer" pkg="pocketsphinx" type="recognizer.py" output="log" >
+			<param name="lm" value="$(find pocketsphinx)/Audio Files/1669.lm"/>
+			<param name="dict" value="$(find pocketsphinx)/Audio Files/1669.dic"/>
+		</node>
+	</group>
+	
+</launch>

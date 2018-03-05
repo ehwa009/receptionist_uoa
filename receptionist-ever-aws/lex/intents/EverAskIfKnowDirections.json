@@ -1,0 +1,16 @@
+{
+    "name": "EverAskIfKnowDirections", 
+    "checksum": "59b54297-8195-476f-8aa6-099ae0ca97bd", 
+    "version": "$LATEST", 
+    "lastUpdatedDate": 1498995622.988, 
+    "createdDate": 1498990538.179, 
+    "sampleUtterances": [], 
+    "slots": [], 
+    "fulfillmentActivity": {
+        "type": "CodeHook", 
+        "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:231755972326:function:everReceptionistLambda", 
+            "messageVersion": "1.0"
+        }
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "status": "READY", 
+    "intents": [
+        {
+            "intentVersion": "2", 
+            "intentName": "EverLocation"
+        }, 
+        {
+            "intentVersion": "3", 
+            "intentName": "EverGetName"
+        }, 
+        {
+            "intentVersion": "2", 
+            "intentName": "EverAskIfKnowDirections"
+        }, 
+        {
+            "intentVersion": "1", 
+            "intentName": "EverThankYou"
+        }, 
+        {
+            "intentVersion": "1", 
+            "intentName": "EverSayDirections"
+        }, 
+        {
+            "intentVersion": "9", 
+            "intentName": "EverMeeting"
+        }, 
+        {
+            "intentVersion": "2", 
+            "intentName": "EverSendEmail"
+        }, 
+        {
+            "intentVersion": "2", 
+            "intentName": "EverWelcome"
+        }
+    ], 
+    "name": "Receptionist", 
+    "locale": "en-US", 
+    "checksum": "e557268b-f839-41e7-8e26-6fd0805e424d", 
+    "abortStatement": {
+        "messages": [
+            {
+                "content": "Sorry, I could not understand. Please feel free to let me know if you require further assistance.", 
+                "contentType": "PlainText"
+            }
+        ]
+    }, 
+    "version": "$LATEST", 
+    "lastUpdatedDate": 1499250859.072, 
+    "createdDate": 1495665591.957, 
+    "clarificationPrompt": {
+        "maxAttempts": 3, 
+        "messages": [
+            {
+                "content": "Sorry, can you please repeat that?", 
+                "contentType": "PlainText"
+            }
+        ]
+    }, 
+    "voiceId": "Joanna", 
+    "childDirected": false, 
+    "idleSessionTTLInSeconds": 300
+}

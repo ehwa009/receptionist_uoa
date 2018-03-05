@@ -1,0 +1,46 @@
+{
+    "dialogCodeHook": {
+        "uri": "arn:aws:lambda:us-east-1:231755972326:function:moviebotFunction", 
+        "messageVersion": "1.0"
+    }, 
+    "name": "FindMovieByActor", 
+    "checksum": "1b1a5894-7bff-405c-b0ff-923d83100553", 
+    "version": "$LATEST", 
+    "lastUpdatedDate": 1498258646.816, 
+    "createdDate": 1498258646.816, 
+    "sampleUtterances": [
+        "I think one of the actors is {Actor}", 
+        "{Actor} starred in it", 
+        "an actor is {Actor}", 
+        "I think one of the actress is {Actor}", 
+        "an actress is {Actor}", 
+        "find movie by actor", 
+        "can I filter by actor", 
+        "actor"
+    ], 
+    "slots": [
+        {
+            "slotType": "AMAZON.Actor", 
+            "name": "Actor", 
+            "slotConstraint": "Required", 
+            "valueElicitationPrompt": {
+                "maxAttempts": 2, 
+                "messages": [
+                    {
+                        "content": "Sure what actor/actress do you know is in the movie?", 
+                        "contentType": "PlainText"
+                    }
+                ]
+            }, 
+            "priority": 1, 
+            "sampleUtterances": []
+        }
+    ], 
+    "fulfillmentActivity": {
+        "type": "CodeHook", 
+        "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:231755972326:function:moviebotFunction", 
+            "messageVersion": "1.0"
+        }
+    }
+}

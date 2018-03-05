@@ -1,0 +1,6 @@
+<launch>
+	<group ns="FaceRecogniser">
+		<!-- Send Email Node --> 
+		<node name="FaceRecogniser" pkg="face_recogniser" type="face_recogniser.py" output="screen"/>
+	</group>	
+</launch>

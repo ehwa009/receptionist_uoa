@@ -1,0 +1,52 @@
+{
+    "name": "EverLocation", 
+    "checksum": "705ef5d0-c05e-48a6-b22d-0c18cb27a636", 
+    "version": "$LATEST", 
+    "lastUpdatedDate": 1498995620.395, 
+    "createdDate": 1498990028.229, 
+    "sampleUtterances": [
+        "I am looking for the {Location}", 
+        "I am looking for {Location}", 
+        "Where is the {Location}", 
+        "Where are the {Location}", 
+        "Where can I find the {Location}", 
+        "Which way is the {Location}", 
+        "I'm looking for the {Location}", 
+        "I am going to the {Location}", 
+        "Which direction is the {Location}", 
+        "How can I get to {Location}", 
+        "How can I get to the {Location}", 
+        "I'm going to {Location}", 
+        "I have a meeting in the {Location}", 
+        "I need to be at the {Location}"
+    ], 
+    "slots": [
+        {
+            "slotType": "UOALocation", 
+            "name": "Location", 
+            "slotConstraint": "Required", 
+            "valueElicitationPrompt": {
+                "maxAttempts": 2, 
+                "messages": [
+                    {
+                        "content": "What location are you looking for?", 
+                        "contentType": "PlainText"
+                    }
+                ], 
+                "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[{\"buttons\":[]}]}"
+            }, 
+            "priority": 1, 
+            "slotTypeVersion": "1", 
+            "sampleUtterances": [
+                "I am looking for the {Location}"
+            ]
+        }
+    ], 
+    "fulfillmentActivity": {
+        "type": "CodeHook", 
+        "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:231755972326:function:everReceptionistLambda", 
+            "messageVersion": "1.0"
+        }
+    }
+}

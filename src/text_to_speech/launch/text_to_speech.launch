@@ -1,0 +1,5 @@
+<launch>
+	<group ns="TextToSpeech">
+		<node name="TextToSpeech" pkg="text_to_speech" type="speech_generator.py" output="screen" />
+	</group>
+</launch>

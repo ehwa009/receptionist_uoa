@@ -1,0 +1,70 @@
+{
+    "confirmationPrompt": {
+        "maxAttempts": 3, 
+        "messages": [
+            {
+                "content": "Thanks. I will send an email of your arrival. Just confirming the meeting is for {Name} from {Place}?", 
+                "contentType": "PlainText"
+            }
+        ]
+    }, 
+    "name": "EverGetName", 
+    "checksum": "0b7c38d9-476b-40a4-b611-66b6e49e0126", 
+    "version": "$LATEST", 
+    "rejectionStatement": {
+        "messages": [
+            {
+                "content": "Okay. Is there anything else I can help you with?", 
+                "contentType": "PlainText"
+            }
+        ]
+    }, 
+    "createdDate": 1499034637.49, 
+    "lastUpdatedDate": 1499038129.132, 
+    "sampleUtterances": [
+        "my name is {Name}", 
+        "Hi I'm {Name}"
+    ], 
+    "slots": [
+        {
+            "slotType": "Place", 
+            "name": "Place", 
+            "slotConstraint": "Required", 
+            "valueElicitationPrompt": {
+                "maxAttempts": 2, 
+                "messages": [
+                    {
+                        "content": "Where should I mention you are coming from?", 
+                        "contentType": "PlainText"
+                    }
+                ]
+            }, 
+            "priority": 2, 
+            "slotTypeVersion": "1", 
+            "sampleUtterances": []
+        }, 
+        {
+            "slotType": "AMAZON.US_FIRST_NAME", 
+            "name": "Name", 
+            "slotConstraint": "Required", 
+            "valueElicitationPrompt": {
+                "maxAttempts": 2, 
+                "messages": [
+                    {
+                        "content": "Can you please tell me your name?", 
+                        "contentType": "PlainText"
+                    }
+                ]
+            }, 
+            "priority": 1, 
+            "sampleUtterances": []
+        }
+    ], 
+    "fulfillmentActivity": {
+        "type": "CodeHook", 
+        "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:231755972326:function:everReceptionistLambda", 
+            "messageVersion": "1.0"
+        }
+    }
+}

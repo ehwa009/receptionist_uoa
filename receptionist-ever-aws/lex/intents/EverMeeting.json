@@ -1,0 +1,56 @@
+{
+    "name": "EverMeeting", 
+    "checksum": "4b627c16-130e-4a60-91a0-1f67ca9f1e9f", 
+    "version": "$LATEST", 
+    "lastUpdatedDate": 1498995601.117, 
+    "createdDate": 1498988701.253, 
+    "sampleUtterances": [
+        "I am here for a meeting", 
+        "I have a meeting with {Person}", 
+        "I want a meeting with {Person}", 
+        "I want to see {Person}", 
+        "I would like to see {Person}", 
+        "I want to meet {Person}", 
+        "I would like to meet {Person}", 
+        "Could I please see {Person}", 
+        "Can I have a meeting with {Person}", 
+        "I need to meet {Person}", 
+        "I have to meet {Person}", 
+        "I am here to see {Person}", 
+        "I came to see {Person}", 
+        "Can I please meet with {Person}", 
+        "I have a meeting", 
+        "Can I please meet {Person}", 
+        "I am here to meet {Person}", 
+        "I'm here to meet {Person}"
+    ], 
+    "slots": [
+        {
+            "slotType": "UOAPerson", 
+            "name": "Person", 
+            "slotConstraint": "Required", 
+            "valueElicitationPrompt": {
+                "maxAttempts": 2, 
+                "messages": [
+                    {
+                        "content": "Who are you here to meet?", 
+                        "contentType": "PlainText"
+                    }
+                ], 
+                "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[{\"buttons\":[]}]}"
+            }, 
+            "priority": 1, 
+            "slotTypeVersion": "1", 
+            "sampleUtterances": [
+                "I am here to meet {Person}"
+            ]
+        }
+    ], 
+    "fulfillmentActivity": {
+        "type": "CodeHook", 
+        "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:231755972326:function:everReceptionistLambda", 
+            "messageVersion": "1.0"
+        }
+    }
+}

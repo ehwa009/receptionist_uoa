@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<launch>
+	
+	<param name="google_tts" type="string" value="no" />
+	<param name="python_tts" type="string" value="no" />
+	<param name="aws_polly_tts" type="string" value="no" />
+	<param name="api_ai_decision" type="string" value="no" />
+	<param name="lex_decision" type="string" value="no" />
+
+	<include file="$(find text_to_speech)/launch/text_to_speech.launch"/>
+
+	<group if="$(arg google_tts)">
+		<param name="google_tts" type="string" value="yes" />
+	</group>
+	<group if="$(arg python_tts)">
+		<param name="python_tts" type="string" value="yes" />
+	</group>
+	<group if="$(arg aws_polly_tts)">
+		<param name="aws_polly_tts" type="string" value="yes" />
+	</group>
+
+
+	<include file="$(find nlp)/launch/nlp.launch"/>
+	<node name="CustomDecisionMaker" pkg="decision_system" type="custom_decision_maker.py" output="screen"/>
+
+	<group if="$(arg api_ai)">
+		<param name="api_ai_decision" type="string" value="yes" />
+		<!-- <include file="$(find api_ai)/launch/api_ai.launch"/> -->
+	</group>
+
+	<group if="$(arg lex)">
+		<!-- <include file="$(find aws_lex)/launch/lex.launch"/> -->
+		<param name="lex_decision" type="string" value="yes" />
+	</group>
+
+	<group ns="ReceptionistDecisionSystem">
+		<node name="DecisionSystem" pkg="decision_system" type="decision.py" output="screen"/>
+	</group>
+
+
+</launch>

@@ -1,0 +1,70 @@
+{
+    "enumerationValues": [
+        {
+            "value": "Wesley"
+        }, 
+        {
+            "value": "Mohan"
+        }, 
+        {
+            "value": "Nick"
+        }, 
+        {
+            "value": "John"
+        }, 
+        {
+            "value": "Soriya"
+        }, 
+        {
+            "value": "Fung"
+        }, 
+        {
+            "value": "Catherine"
+        }, 
+        {
+            "value": "Sheng"
+        }, 
+        {
+            "value": "Bruce"
+        }, 
+        {
+            "value": "Matt"
+        }, 
+        {
+            "value": "Natasha"
+        }, 
+        {
+            "value": "Jamie"
+        }, 
+        {
+            "value": "Ho Seok"
+        }, 
+        {
+            "value": "Bob"
+        }, 
+        {
+            "value": "Craig"
+        }, 
+        {
+            "value": "Chris"
+        }, 
+        {
+            "value": "Eddie"
+        }, 
+        {
+            "value": "Jack"
+        }, 
+        {
+            "value": "Henry"
+        }, 
+        {
+            "value": "Jong Yoon"
+        }
+    ], 
+    "name": "UOAPerson", 
+    "checksum": "81c8d63a-39d3-4e9e-b6dc-eeef8072b522", 
+    "version": "$LATEST", 
+    "lastUpdatedDate": 1498988863.61, 
+    "createdDate": 1498988863.61, 
+    "description": "ever"
+}

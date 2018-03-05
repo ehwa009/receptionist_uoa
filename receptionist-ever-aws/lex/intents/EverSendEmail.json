@@ -1,0 +1,12 @@
+{
+    "name": "EverSendEmail", 
+    "checksum": "752ea300-f511-46c9-9da3-d8156ddd4059", 
+    "version": "$LATEST", 
+    "lastUpdatedDate": 1498990544.92, 
+    "createdDate": 1498990452.502, 
+    "sampleUtterances": [], 
+    "slots": [], 
+    "fulfillmentActivity": {
+        "type": "ReturnIntent"
+    }
+}

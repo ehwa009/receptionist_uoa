@@ -1,0 +1,6 @@
+<launch>
+	<group ns="FaceTrainer">
+		<!-- Send Email Node --> 
+		<node name="FaceTrainer" pkg="face_trainer" type="face_trainer.py" output="screen"/>
+	</group>	
+</launch>
