@@ -1,0 +1,8 @@
+prefix=/home/eddie/receptionist_uoa/devel
+
+Name: text_to_speech
+Description: Description of text_to_speech
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/eddie/receptionist_uoa/devel/lib 
+Requires: 

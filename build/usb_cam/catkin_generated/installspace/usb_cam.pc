@@ -1,0 +1,8 @@
+prefix=/home/eddie/receptionist_uoa/install
+
+Name: usb_cam
+Description: Description of usb_cam
+Version: 0.3.4
+Cflags: -I/home/eddie/receptionist_uoa/install/include
+Libs: -L/home/eddie/receptionist_uoa/install/lib -lusb_cam
+Requires: 

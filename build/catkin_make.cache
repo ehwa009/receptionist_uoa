@@ -1,0 +1,2 @@
+aws_face_recogniser:decision_system:face_recogniser:face_trainer:nlp:pocketsphinx:procrob_functional:receptionist_perception_system:ros_alexa:speech_recogniser:text_to_speech:usb_cam
+-DCATKIN_DEVEL_PREFIX=/home/eddie/receptionist_uoa/devel -DCMAKE_INSTALL_PREFIX=/home/eddie/receptionist_uoa/install -G Unix Makefiles

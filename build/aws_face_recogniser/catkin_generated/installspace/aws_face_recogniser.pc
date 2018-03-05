@@ -1,0 +1,8 @@
+prefix=/home/eddie/receptionist_uoa/install
+
+Name: aws_face_recogniser
+Description: Description of aws_face_recogniser
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/eddie/receptionist_uoa/install/lib 
+Requires: 

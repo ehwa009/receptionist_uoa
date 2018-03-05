@@ -1,0 +1,8 @@
+prefix=/home/eddie/receptionist_uoa/devel
+
+Name: ros_alexa
+Description: Description of ros_alexa
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/eddie/receptionist_uoa/devel/lib 
+Requires: 

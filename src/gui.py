@@ -58,8 +58,10 @@ def launchDecision():
 	print("launching decision system...")
 	global decisionSystemProcess
 	args = ["roslaunch", "decision_system", "decision.launch"]
+
 	args.append("api_ai:=true") if apiAiCheckVar.get() == 1 else args.append("api_ai:=false")
 	args.append("lex:=true") if lexCheckVar.get() == 1 else args.append("lex:=false")
+	
 	args.append("google_tts:=true") if googleTTSCheckVar.get() == 1 else args.append("google_tts:=false")
 	args.append("python_tts:=true") if pythonTTSCheckVar.get() == 1 else args.append("python_tts:=false")
 	args.append("aws_polly_tts:=true") if awsPollyTTSCheckVar.get() == 1 else args.append("aws_polly_tts:=false")
@@ -157,9 +159,11 @@ var3.set("AI Decision System")
 
 apiAiCheckVar = IntVar()
 lexCheckVar = IntVar()
+avsCheckVar = IntVar()
 lexCheckVar.set(1)
 Checkbutton(frame, text = "API.AI", variable = apiAiCheckVar, onvalue = 1, offvalue = 0, width = 20).grid(row=7, column=0, sticky=W)
 Checkbutton(frame, text = "Lex", variable = lexCheckVar, onvalue = 1, offvalue = 0, width = 20).grid(row=7, column=1, sticky=W)
+Checkbutton(frame, text = "AVS", variable = avsCheckVar, onvalue = 1, offvalue = 0, width = 20).grid(row=7, column=2, sticky=W)
 
 var4 = StringVar()
 Label( frame, textvariable=var4, font="Arial 10 bold" ).grid(row=8, sticky=W)
